@@ -24,7 +24,7 @@ RUN adduser $username
 USER $username
 ARG COURSE
 ARG TRAINER
-RUN echo "course=${COURSE}, trainer=${TRAINER}, version=${version}
+RUN echo "course=${COURSE}, trainer=${TRAINER}, version=${version}"
 ENV COURSE=${COURSE}
 ENV TRAINER=${TRAINER}
 CMD ["sleep","100"]

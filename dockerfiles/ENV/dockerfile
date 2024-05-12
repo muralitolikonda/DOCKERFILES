@@ -1,0 +1,7 @@
+#almalinux is as same as linux#
+FROM almalinux:8
+RUN yum install nginx -y
+LABEL triaining="Devops" \
+      trainer="sivakumar" \
+      duration="3months" 
+CMD ["nginx","-g","daemon off;"]

@@ -1,4 +1,4 @@
 FROM almalinux:8
 LABEL triaining="Devops" \
       trainer="sivakumar" \
-      duration="3months"
+      duration="3months" 

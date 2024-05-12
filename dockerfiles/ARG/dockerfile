@@ -5,13 +5,26 @@
 #USER $username
 #CMD ["sleep","100"]
 
-FROM almalinux:8
+#case2
+#FROM almalinux:8
+#ARG username
+#RUN adduser $username
+#USER $username
+#ARG COURSE
+#ARG TRAINER
+#RUN echo "course=${COURSE}, trainer=${TRAINER}"
+#ENV COURSE=${COURSE}
+#ENV TRAINER=${TRAINER}
+#CMD ["sleep","100"]
+
+ARG version
+FROM almalinux:${version}
 ARG username
 RUN adduser $username
 USER $username
 ARG COURSE
 ARG TRAINER
-RUN echo "course=${COURSE}, trainer=${TRAINER}"
+RUN echo "course=${COURSE}, trainer=${TRAINER}, version=${version}
 ENV COURSE=${COURSE}
 ENV TRAINER=${TRAINER}
 CMD ["sleep","100"]
